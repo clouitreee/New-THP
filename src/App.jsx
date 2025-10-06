@@ -64,14 +64,14 @@ function App() {
                 >
                   Kontakt
                 </Link>
-                <Button onClick={toggleDarkMode} variant="ghost" size="icon">
+                <Button onClick={toggleDarkMode} variant="ghost" size="icon" aria-label="Dunkelmodus umschalten">
                   {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
               </div>
 
               {/* Mobile Menu Button */}
               <div className="flex items-center space-x-2 md:hidden">
-                <Button onClick={toggleDarkMode} variant="ghost" size="icon">
+                <Button onClick={toggleDarkMode} variant="ghost" size="icon" aria-label="Dunkelmodus umschalten">
                   {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
                 <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
