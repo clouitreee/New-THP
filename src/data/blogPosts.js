@@ -1,14 +1,15 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "NIS2 für Anfänger: Einfache Umsetzung in NRW",
-    slug: "nis2-fuer-anfaenger-nrw",
-    excerpt: "Erfahren Sie, wie Sie die NIS2-Richtlinie in Ihrem Unternehmen in Nordrhein-Westfalen einfach und effektiv umsetzen können.",
-    date: "2025-10-01",
-    author: "José Carlos Martín Lache",
-    category: "Cybersicherheit",
-    readTime: "8 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'NIS2 für Anfänger: Einfache Umsetzung in NRW',
+    slug: 'nis2-fuer-anfaenger-nrw',
+    excerpt:
+      'Erfahren Sie, wie Sie die NIS2-Richtlinie in Ihrem Unternehmen in Nordrhein-Westfalen einfach und effektiv umsetzen können.',
+    date: '2025-10-01',
+    author: 'José Carlos Martín Lache',
+    category: 'Cybersicherheit',
+    readTime: '8 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 Die **NIS2-Richtlinie** (Network and Information Security Directive 2) ist eine EU-weite Verordnung, die darauf abzielt, die Cybersicherheit in kritischen Infrastrukturen und wichtigen Sektoren zu stärken. Für Unternehmen in Nordrhein-Westfalen bedeutet dies neue Anforderungen und Pflichten, die bis Ende 2024 umgesetzt werden müssen.
 
@@ -131,18 +132,19 @@ Bei Tech Hilfe Pro planen wir, KI-gestützte Tools in unsere Services zu integri
 Die Umsetzung von NIS2 mag zunächst überwältigend erscheinen, aber mit einem strukturierten Ansatz und der richtigen Unterstützung ist sie durchaus machbar. Beginnen Sie frühzeitig, priorisieren Sie die wichtigsten Maßnahmen und nutzen Sie externe Expertise, wo nötig.
 
 **Kontaktieren Sie uns** für eine kostenlose Erstberatung und erfahren Sie, wie wir Ihnen bei der NIS2-Compliance helfen können. Mit unserem Basis- oder Premium-Abonnement sind Sie auf der sicheren Seite.
-    `
+    `,
   },
   {
     id: 2,
-    title: "Digitalisierungstipps für KMU in NRW mit Förderungen",
-    slug: "digitalisierung-kmu-nrw-foerderungen",
-    excerpt: "Entdecken Sie praktische Digitalisierungsstrategien und erfahren Sie, wie Sie Förderprogramme wie 'Digital Jetzt' optimal nutzen.",
-    date: "2025-09-28",
-    author: "José Carlos Martín Lache",
-    category: "Digitalisierung",
-    readTime: "10 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'Digitalisierungstipps für KMU in NRW mit Förderungen',
+    slug: 'digitalisierung-kmu-nrw-foerderungen',
+    excerpt:
+      "Entdecken Sie praktische Digitalisierungsstrategien und erfahren Sie, wie Sie Förderprogramme wie 'Digital Jetzt' optimal nutzen.",
+    date: '2025-09-28',
+    author: 'José Carlos Martín Lache',
+    category: 'Digitalisierung',
+    readTime: '10 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 Die **Digitalisierung** ist für kleine und mittlere Unternehmen (KMU) in Nordrhein-Westfalen nicht mehr optional, sondern eine Notwendigkeit, um wettbewerbsfähig zu bleiben. Glücklicherweise gibt es zahlreiche Förderprogramme, die KMU bei der digitalen Transformation unterstützen.
 
@@ -389,18 +391,19 @@ Wir begleiten Sie durch den gesamten Digitalisierungsprozess:
 Die Digitalisierung ist eine Investition in die Zukunft Ihres Unternehmens. Mit den richtigen Strategien, Tools und Förderungen ist sie für jedes KMU machbar. Beginnen Sie heute und sichern Sie sich Wettbewerbsvorteile für morgen.
 
 **Kontaktieren Sie uns** für ein kostenloses Beratungsgespräch und erfahren Sie, wie wir Ihre Digitalisierung erfolgreich gestalten können.
-    `
+    `,
   },
   {
     id: 3,
-    title: "Cybersicherheit im Home Office: Praktische Beispiele aus Köln",
-    slug: "cybersicherheit-home-office-koeln",
-    excerpt: "Schützen Sie Ihr Home Office vor Cyberbedrohungen mit praktischen Tipps und bewährten Sicherheitsmaßnahmen.",
-    date: "2025-09-25",
-    author: "José Carlos Martín Lache",
-    category: "Cybersicherheit",
-    readTime: "9 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'Cybersicherheit im Home Office: Praktische Beispiele aus Köln',
+    slug: 'cybersicherheit-home-office-koeln',
+    excerpt:
+      'Schützen Sie Ihr Home Office vor Cyberbedrohungen mit praktischen Tipps und bewährten Sicherheitsmaßnahmen.',
+    date: '2025-09-25',
+    author: 'José Carlos Martín Lache',
+    category: 'Cybersicherheit',
+    readTime: '9 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 Das **Home Office** ist für viele Menschen in Köln und ganz Deutschland zur neuen Normalität geworden. Doch mit der Flexibilität kommen auch neue Sicherheitsrisiken. In diesem Artikel zeigen wir Ihnen praktische Maßnahmen, um Ihr Home Office sicher zu gestalten.
 
@@ -712,18 +715,19 @@ Wir helfen Ihnen, Ihr Home Office sicher zu gestalten:
 Ein sicheres Home Office erfordert eine Kombination aus technischen Maßnahmen, guten Gewohnheiten und kontinuierlicher Wachsamkeit. Mit den in diesem Artikel beschriebenen Schritten können Sie Ihr Risiko erheblich reduzieren und beruhigt von zu Hause arbeiten.
 
 **Kontaktieren Sie uns** für eine kostenlose Sicherheitsberatung und erfahren Sie, wie wir Ihr Home Office optimal schützen können.
-    `
+    `,
   },
   {
     id: 4,
-    title: "Technik für Seniors: Einfache Tutorials für den Alltag",
-    slug: "technik-fuer-seniors-tutorials",
-    excerpt: "Schritt-für-Schritt-Anleitungen für Senioren, um Technologie sicher und selbstbewusst im Alltag zu nutzen.",
-    date: "2025-09-22",
-    author: "José Carlos Martín Lache",
-    category: "Seniors",
-    readTime: "10 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'Technik für Seniors: Einfache Tutorials für den Alltag',
+    slug: 'technik-fuer-seniors-tutorials',
+    excerpt:
+      'Schritt-für-Schritt-Anleitungen für Senioren, um Technologie sicher und selbstbewusst im Alltag zu nutzen.',
+    date: '2025-09-22',
+    author: 'José Carlos Martín Lache',
+    category: 'Seniors',
+    readTime: '10 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 Technologie kann das Leben von **Senioren** erheblich bereichern - von der Kommunikation mit Familie und Freunden bis hin zu praktischen Alltagshilfen. In diesem Artikel bieten wir einfache, verständliche Anleitungen für die wichtigsten technischen Anwendungen.
 
@@ -1189,18 +1193,19 @@ Wir bieten spezialisierte Services für Senioren:
 Technologie kann das Leben von Senioren bereichern und die Unabhängigkeit fördern. Mit Geduld, Übung und der richtigen Unterstützung kann jeder lernen, moderne Geräte sicher und selbstbewusst zu nutzen.
 
 **Kontaktieren Sie uns** für eine kostenlose Beratung und erfahren Sie, wie wir Ihnen oder Ihren Angehörigen helfen können, die digitale Welt zu entdecken. Wir kommen gerne zu Ihnen nach Hause in Köln oder Neuss!
-    `
+    `,
   },
   {
     id: 5,
-    title: "Smart Home Sicherheit: Tipps für Familien in Neuss",
-    slug: "smart-home-sicherheit-neuss",
-    excerpt: "Machen Sie Ihr Smart Home sicher: Praktische Tipps für die sichere Nutzung von Alexa, Google Home und anderen smarten Geräten.",
-    date: "2025-09-19",
-    author: "José Carlos Martín Lache",
-    category: "Smart Home",
-    readTime: "9 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'Smart Home Sicherheit: Tipps für Familien in Neuss',
+    slug: 'smart-home-sicherheit-neuss',
+    excerpt:
+      'Machen Sie Ihr Smart Home sicher: Praktische Tipps für die sichere Nutzung von Alexa, Google Home und anderen smarten Geräten.',
+    date: '2025-09-19',
+    author: 'José Carlos Martín Lache',
+    category: 'Smart Home',
+    readTime: '9 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 **Smart Home-Geräte** werden immer beliebter in deutschen Haushalten. Von Alexa und Google Home über smarte Thermostate bis hin zu Sicherheitskameras - die Möglichkeiten sind vielfältig. Doch mit der Bequemlichkeit kommen auch Sicherheitsrisiken. In diesem Artikel zeigen wir Ihnen, wie Sie Ihr Smart Home in Neuss und Umgebung sicher gestalten.
 
@@ -1612,18 +1617,19 @@ Wir helfen Ihnen, Ihr Smart Home in Neuss und Umgebung sicher zu gestalten:
 Ein Smart Home bietet viele Vorteile, erfordert aber auch Aufmerksamkeit für Sicherheit und Datenschutz. Mit den richtigen Maßnahmen können Sie die Bequemlichkeit genießen und gleichzeitig Ihre Privatsphäre und Sicherheit schützen.
 
 **Kontaktieren Sie uns** für eine kostenlose Smart Home-Sicherheitsberatung und erfahren Sie, wie wir Ihr Zuhause in Neuss optimal schützen können.
-    `
+    `,
   },
   {
     id: 6,
-    title: "KI in der IT-Support: Wie Künstliche Intelligenz den Alltag erleichtert",
-    slug: "ki-im-it-support",
-    excerpt: "Entdecken Sie, wie Künstliche Intelligenz den IT-Support revolutioniert und welche Vorteile KI-gestützte Lösungen bieten.",
-    date: "2025-09-16",
-    author: "José Carlos Martín Lache",
-    category: "Künstliche Intelligenz",
-    readTime: "10 Min.",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: 'KI in der IT-Support: Wie Künstliche Intelligenz den Alltag erleichtert',
+    slug: 'ki-im-it-support',
+    excerpt:
+      'Entdecken Sie, wie Künstliche Intelligenz den IT-Support revolutioniert und welche Vorteile KI-gestützte Lösungen bieten.',
+    date: '2025-09-16',
+    author: 'José Carlos Martín Lache',
+    category: 'Künstliche Intelligenz',
+    readTime: '10 Min.',
+    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     content: `
 **Künstliche Intelligenz (KI)** verändert die Art und Weise, wie IT-Support bereitgestellt wird. Von automatisierten Chatbots bis hin zu prädiktiven Wartungssystemen - KI macht IT-Support schneller, effizienter und kostengünstiger. In diesem Artikel zeigen wir Ihnen, wie KI bereits heute den IT-Support revolutioniert und was die Zukunft bringt.
 
@@ -2061,6 +2067,6 @@ Bei Tech Hilfe Pro sind wir begeistert von den Möglichkeiten, die KI bietet, un
 ---
 
 *Dieser Artikel ist Teil unserer Serie über moderne IT-Trends. Abonnieren Sie unseren Newsletter, um keine Updates zu verpassen!*
-    `
-  }
+    `,
+  },
 ]
