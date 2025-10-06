@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button.jsx'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import './App.css'
+import { useDarkMode } from './hooks/useDarkMode'
 
 // Import pages
 import Home from './pages/Home'
@@ -18,20 +19,8 @@ import AGB from './pages/AGB'
 import FAQ from './pages/FAQ'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, toggleDarkMode] = useDarkMode()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [darkMode])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -39,33 +28,49 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="bg-background text-foreground min-h-screen">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+        <nav className="bg-background/95 supports-[backdrop-filter]:bg-background/60 border-border sticky top-0 z-50 border-b backdrop-blur">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
+            <div className="flex h-16 items-center justify-between">
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">TH</span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-800">
+                  <span className="text-xl font-bold text-white">TH</span>
                 </div>
-                <span className="font-bold text-xl">Tech Hilfe Pro</span>
+                <span className="text-xl font-bold">Tech Hilfe Pro</span>
               </Link>
 
               {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-8">
-                <Link to="/" className="text-foreground hover:text-primary transition-colors">Home</Link>
-                <Link to="/services" className="text-foreground hover:text-primary transition-colors">Services</Link>
-                <Link to="/blog" className="text-foreground hover:text-primary transition-colors">Blog</Link>
-                <Link to="/about" className="text-foreground hover:text-primary transition-colors">Über uns</Link>
-                <Link to="/contact" className="text-foreground hover:text-primary transition-colors">Kontakt</Link>
+              <div className="hidden items-center space-x-8 md:flex">
+                <Link to="/" className="text-foreground hover:text-primary transition-colors">
+                  Home
+                </Link>
+                <Link
+                  to="/services"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Services
+                </Link>
+                <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
+                <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+                  Über uns
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Kontakt
+                </Link>
                 <Button onClick={toggleDarkMode} variant="ghost" size="icon">
                   {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
               </div>
 
               {/* Mobile Menu Button */}
-              <div className="md:hidden flex items-center space-x-2">
+              <div className="flex items-center space-x-2 md:hidden">
                 <Button onClick={toggleDarkMode} variant="ghost" size="icon">
                   {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
@@ -80,13 +85,43 @@ function App() {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="md:hidden py-4 space-y-4"
+                className="space-y-4 py-4 md:hidden"
               >
-                <Link to="/" onClick={toggleMobileMenu} className="block text-foreground hover:text-primary transition-colors">Home</Link>
-                <Link to="/services" onClick={toggleMobileMenu} className="block text-foreground hover:text-primary transition-colors">Services</Link>
-                <Link to="/blog" onClick={toggleMobileMenu} className="block text-foreground hover:text-primary transition-colors">Blog</Link>
-                <Link to="/about" onClick={toggleMobileMenu} className="block text-foreground hover:text-primary transition-colors">Über uns</Link>
-                <Link to="/contact" onClick={toggleMobileMenu} className="block text-foreground hover:text-primary transition-colors">Kontakt</Link>
+                <Link
+                  to="/"
+                  onClick={toggleMobileMenu}
+                  className="text-foreground hover:text-primary block transition-colors"
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/services"
+                  onClick={toggleMobileMenu}
+                  className="text-foreground hover:text-primary block transition-colors"
+                >
+                  Services
+                </Link>
+                <Link
+                  to="/blog"
+                  onClick={toggleMobileMenu}
+                  className="text-foreground hover:text-primary block transition-colors"
+                >
+                  Blog
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={toggleMobileMenu}
+                  className="text-foreground hover:text-primary block transition-colors"
+                >
+                  Über uns
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={toggleMobileMenu}
+                  className="text-foreground hover:text-primary block transition-colors"
+                >
+                  Kontakt
+                </Link>
               </motion.div>
             )}
           </div>
@@ -109,53 +144,118 @@ function App() {
         {/* Footer */}
         <footer className="bg-muted mt-20">
           <div className="container mx-auto px-4 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               {/* Company Info */}
               <div>
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">TH</span>
+                <div className="mb-4 flex items-center space-x-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-800">
+                    <span className="text-xl font-bold text-white">TH</span>
                   </div>
-                  <span className="font-bold text-lg">Tech Hilfe Pro</span>
+                  <span className="text-lg font-bold">Tech Hilfe Pro</span>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   Professioneller IT-Support in Köln und Neuss
                 </p>
               </div>
 
               {/* Quick Links */}
               <div>
-                <h3 className="font-semibold mb-4">Quick Links</h3>
+                <h3 className="mb-4 font-semibold">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
-                  <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-                  <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">Über uns</Link></li>
-                  <li><Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/blog"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/about"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      Über uns
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/faq"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      FAQ
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
               {/* Legal */}
               <div>
-                <h3 className="font-semibold mb-4">Rechtliches</h3>
+                <h3 className="mb-4 font-semibold">Rechtliches</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">Impressum</Link></li>
-                  <li><Link to="/datenschutz" className="text-muted-foreground hover:text-primary transition-colors">Datenschutz</Link></li>
-                  <li><Link to="/agb" className="text-muted-foreground hover:text-primary transition-colors">AGB</Link></li>
+                  <li>
+                    <Link
+                      to="/impressum"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      Impressum
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/datenschutz"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      Datenschutz
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/agb"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      AGB
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
               {/* Contact */}
               <div>
-                <h3 className="font-semibold mb-4">Kontakt</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>WhatsApp: <a href="https://wa.me/4915565029989" className="hover:text-primary transition-colors">+49 155 65029989</a></li>
-                  <li>E-Mail: <a href="mailto:info@techhilfepro.de" className="hover:text-primary transition-colors">info@techhilfepro.de</a></li>
+                <h3 className="mb-4 font-semibold">Kontakt</h3>
+                <ul className="text-muted-foreground space-y-2 text-sm">
+                  <li>
+                    WhatsApp:{' '}
+                    <a
+                      href="https://wa.me/4915565029989"
+                      className="hover:text-primary transition-colors"
+                    >
+                      +49 155 65029989
+                    </a>
+                  </li>
+                  <li>
+                    E-Mail:{' '}
+                    <a
+                      href="mailto:info@techhilfepro.de"
+                      className="hover:text-primary transition-colors"
+                    >
+                      info@techhilfepro.de
+                    </a>
+                  </li>
                   <li>Köln & Neuss, NRW</li>
                 </ul>
               </div>
             </div>
 
-            <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+            <div className="border-border text-muted-foreground mt-8 border-t pt-8 text-center text-sm">
               <p>&copy; {new Date().getFullYear()} Tech Hilfe Pro. Alle Rechte vorbehalten.</p>
             </div>
           </div>
